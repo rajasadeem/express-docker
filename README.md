@@ -1,4 +1,5 @@
 # express-docker
 
-#start-server
--- run docker-compose up --build
+# start-server
+
+docker-compose up --build
