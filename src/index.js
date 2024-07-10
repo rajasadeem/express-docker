@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 const app = express();
 
 app.get("/", (_, res) => {
-  res.send("server is running");
+  return res.send("server is running");
 });
 
 mongoose.connect("mongodb://db:27017/express-docker");

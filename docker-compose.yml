@@ -2,6 +2,8 @@ version: "3.8"
 services:
   app:
     build: .
+    container_name: app
+    restart: always
     ports:
       - "3000:3000"
     volumes:
@@ -15,11 +17,13 @@ services:
       - db
 
   db:
-    image: mongo:4.4
+    container_name: mongodb
+    restart: always
+    image: mongo:latest
     ports:
       - "27017:27017"
     volumes:
-      - mongodbdata:/data/db
+      - ./data:/data/db
 
 volumes:
   mongodbdata:
